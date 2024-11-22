@@ -290,8 +290,3 @@ You can download and import the Postman collection for this API:
 ## Stay in touch
 
 - Author - [Harsh Patel](https://github.com/Harsh-Patel-1)
-<<<<<<< HEAD
-
-=======
-- Attach the [Postman collection](https://api.postman.com/collections/32768522-f4746d27-3486-4dca-8dd8-163cdd9776b6?access_key=PMAT-01JD7DZQ67YY41JP4J5GA9Q21C) to the project if available.
->>>>>>> 1b70da4 (Initial commit)
