@@ -284,7 +284,7 @@ Delete Preferences
 
 You can download and import the Postman collection for this API:
 
-1. Save the Postman collection JSON file as postman_collection.json in the project root.
+1. Save the Postman collection JSON file as User Notification API.postman_collection.json in the project root.
 2. Import it into Postman to test the API endpoints.
 
 ## Stay in touch
