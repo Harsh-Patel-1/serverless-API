@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "f4746d27-3486-4dca-8dd8-163cdd9776b6",
+		"name": "User Notification API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32768522",
+		"_collection_link": "https://solar-moon-41341.postman.co/workspace/New-Team-Workspace~cb48227e-abee-4c0a-9381-084436c6946e/collection/32768522-f4746d27-3486-4dca-8dd8-163cdd9776b6?action=share&source=collection_link&creator=32768522"
+	},
+	"item": [
+		{
+			"name": "User Preferences",
+			"item": [
+				{
+					"name": "Create User Preferences",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"user123\",\r\n  \"email\": \"user@example.com\",\r\n  \"preferences\": {\r\n    \"marketing\": true,\r\n    \"newsletter\": false,\r\n    \"updates\": true,\r\n    \"frequency\": \"weekly\",\r\n    \"channels\": {\r\n      \"email\": true,\r\n      \"sms\": false,\r\n      \"push\": true\r\n    }\r\n  },\r\n  \"timezone\": \"America/New_York\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/preferences",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"preferences"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " Get User Preferences",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/preferences/user123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"preferences",
+								"user123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " Update User Preferences",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"preferences\": {\r\n    \"marketing\": true,       \r\n    \"newsletter\": false,    \r\n    \"updates\": true,         \r\n    \"frequency\": \"weekly\"    \r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/preferences/user123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"preferences",
+								"user123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " Delet User Preferences",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/preferences/user123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"preferences",
+								"user123"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "Send Notification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"user123\",\r\n  \"type\": \"marketing\",\r\n  \"channel\": \"email\",\r\n  \"content\": {\r\n    \"subject\": \"Special Offer!\",\r\n    \"body\": \"Check out our latest deals!\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/notifications/send",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notifications",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Notification Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/notifications/user123/logs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notifications",
+								"user123",
+								"logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Notification Statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/notifications/stats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"notifications",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
